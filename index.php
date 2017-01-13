@@ -11,6 +11,14 @@
     
     $grafico->setStyle(5,"#CCCCCC","#CCBB44","#000000");
     
+    $serie1 = new serie;
+    
+    $serie1->setColor("#111111");
+    
+    $serie1->setData([3,2,7,4,5,9]);
+    
+    $grafico->addSerie($serie1);
+    
     if ($grafico->renderToFile('prueba.png'))
     {
         echo "<img src='prueba.png'>";
