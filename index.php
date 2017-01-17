@@ -7,15 +7,13 @@
     
     $grafico->setHeight(150);
     
-    //$grafico->style->setBackgroudColor("FFFFFF");
-    
-    $grafico->setStyle(5,"#CCCCCC","#CCBB44","#000000");
+    $grafico->setBGColor("#CCCCCC");
     
     $serie1 = new serie;
     
-    $serie1->setColor("#111111");
+    $serie1->setColor("#006600");
     
-    $serie1->setData([3,2,7,4,5,9]);
+    $serie1->setData([3,2,7,4,5,6]);
     
     $grafico->addSerie($serie1);
     
