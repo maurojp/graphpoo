@@ -153,17 +153,19 @@ class graphpoo
         
         imagefill( $imagen, 0, 0, $bgColorRGB ); 
         
+        // Title
+        
+        $titleColorArray = $this->hexToRgb($this->titleColor);
+        
+        $titleColorRGB = imagecolorallocatealpha($imagen, $titleColorArray[0], $titleColorArray[1], $titleColorArray[2], 0);
+        
+        imagestring($imagen, 5, $this->leftMargin + 2, $this->topMargin / 4, $this->title, $titleColorRGB); 
+        
         // Series
         
-        $leftMargin = 20;
+        $separatorWidth = 5; // Cambiar por una propiedad
         
-        $rightMargin = 20;
-        
-        $topMargin = 20;
-        
-        $bottomMargin = 20;
-        
-        $separatorWidth = 5;
+        $sMax = $this->globalMax($this->series);
         
         foreach ($this->series as $s)
         {
@@ -176,9 +178,9 @@ class graphpoo
             
             $sData = $s->getData();
             
-            $sMax = max($sData);
+            //$sMax = max($sData);
             
-            $columnWidth = ($this->width - $leftMargin - $rightMargin - ($separatorWidth * count($sData))) / count($sData);
+            $columnWidth = ($this->width - $this->leftMargin - $this->rightMargin - ($separatorWidth * count($sData))) / count($sData);
             
             $columnCount = 0;
             
@@ -186,18 +188,18 @@ class graphpoo
             
             foreach ($sData as $barValue)
             {
-                $cleft = $leftMargin + (($columnWidth + $separatorWidth) * $columnCount);
-                $cright = $leftMargin + (($columnWidth + $separatorWidth) * $columnCount) + $columnWidth;
-                $ctop = $this->height - ((($barValue * ($this->height - ($topMargin + $bottomMargin))) / $sMax) + $bottomMargin);
-                $cbottom = $this->height - $bottomMargin;
+                $cleft = $this->leftMargin + (($columnWidth + $separatorWidth) * $columnCount);
+                $cright = $this->leftMargin + (($columnWidth + $separatorWidth) * $columnCount) + $columnWidth;
+                $ctop = $this->height - ((($barValue * ($this->height - ($this->topMargin + $this->bottomMargin))) / $sMax) + $this->bottomMargin);
+                $cbottom = $this->height - $this->bottomMargin;
                 imagefilledrectangle($imagen, $cleft, $ctop, $cright, $cbottom, $sColorRGB);
-                imagestring($imagen, 12, $cleft + 2, $cbottom + 2, $barValue, $sColorRGB);
+                imagestring($imagen, 3, $cleft + 2, $cbottom + 2, $barValue, $sColorRGB);
                 $columnCount ++;
 
             }
-        
-            return imagepng($imagen, $filename);
         }
+        
+        return imagepng($imagen, $filename);
     }
     
     function __construct()
@@ -208,6 +210,19 @@ class graphpoo
     private function hexToRgb($hexaValue)
     {
         return sscanf($hexaValue, "#%02x%02x%02x");
+    }
+    
+    private function globalMax()
+    {
+        $max = 0;
+        foreach ($this->series as $s)
+        {
+            if (max($s->getData()) > $max)
+            {
+                $max = max($s->getData());
+            }
+        }
+        return $max;
     }
 }
 
