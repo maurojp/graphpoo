@@ -37,7 +37,7 @@ class serie
         return $this;
     }
     
-    public function getType($value)
+    public function getType()
     {
         return $this->type;
     }
