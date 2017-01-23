@@ -3,7 +3,7 @@ Graficos Orientados a Objetos para PHP. (for english versión see README-EN.md)
 ### graphpoo es una librería para utilizar graficos de linea o barras en PHP. (Esta versión no incluye graficos de pastel)
 Todos los nombres en el código (variables, clases, atributos, metodos, etc.) están en ingles.
 
-# Métodos: (clase graphpoo)
+## Métodos: (clase graphpoo)
 - setHeight() //Alto total del gráfico.
 - setWidth() //Ancho total del grafico.
 - setTopMargin() //Margen superior.
@@ -33,7 +33,7 @@ Todos los nombres en el código (variables, clases, atributos, metodos, etc.) es
 - addSerie() //Agrega un objeto de tipo Serie al gráfico.
 - renderToFile() //Genera el gráfico y lo guarda en un archivo.
 
-# Métodos: (clase serie)
+## Métodos: (clase serie)
 - setTitle() //Titulo de la serie (aparece en la leyenda si esta habilitada)
 - setType() //Tipo de gráfico. ("BAR","LINE")
 - setColor() //Color de la serie.
