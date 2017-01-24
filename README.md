@@ -48,4 +48,4 @@ Todos los nombres en el código (variables, clases, atributos, métodos, etc.) e
 - setData() //Matriz con los datos de la serie.
 
 ## Ejemplos
-![PHPGraphLib Graph Example](http://www.ebrueggeman.com/sites/www.ebrueggeman.com/files/images/phpgraphlib_example_graph.png)
+![graphpoo_example1](https://github.com/mauroruso/graphpoo/blob/master/graphpoo_example1.png)
