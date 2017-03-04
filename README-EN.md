@@ -1,5 +1,7 @@
 # graphpoo
 OO Graphics for PHP.
+graphpoo is open-source under MIT license. (see LICENSE.txt)
+
 ### graphpoo is a library to draw line and bar graphics on php. (NOT SUPPORT FOR PIE GRAPHS IN THIS VERSION)
 ## Methods: (class graphpoo)
 - setHeight() 
