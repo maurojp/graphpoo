@@ -1,5 +1,6 @@
 # graphpoo (spanish)
 Graficos Orientados a Objetos para PHP. (for english versión see README-EN.md)
+
 graphpoo es software open-source bajo licencia MIT. (ver LICENSE.txt)
 ### graphpoo es una librería para utilizar gráficos de linea o barras en PHP. (Esta versión no incluye gráficos de pastel)
 Todos los nombres en el código (variables, clases, atributos, métodos, etc.) están en ingles.
