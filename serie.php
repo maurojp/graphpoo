@@ -11,6 +11,10 @@ class serie
     
     private $color;
     
+    private $border;
+    
+    private $borderColor;
+    
     private $data;
     
     public function setTitle($value)
@@ -31,10 +35,27 @@ class serie
         return $this;
     }
     
+    public function setBorder($value)
+    {
+        $this->border = $value;
+        return $this;
+    }
+    
+    public function setBorderColor($value)
+    {
+        $this->borderColor = $value;
+        return $this;
+    }
+    
     public function setData($value)
     {
         $this->data = $value;
         return $this;
+    }
+    
+    public function getTitle()
+    {
+        return $this->title;
     }
     
     public function getType()
@@ -45,6 +66,16 @@ class serie
     public function getColor()
     {
         return $this->color;
+    }
+    
+    public function getBorder()
+    {
+        return $this->border;
+    }
+    
+    public function getBorderColor()
+    {
+        return $this->borderColor;
     }
     
     public function getData()
