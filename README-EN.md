@@ -49,4 +49,4 @@ OO Graphics for PHP.
 ## Examples
 ![graphpoo_example1](https://github.com/mauroruso/graphpoo/blob/master/graphpoo_example1.png)
 
-## This document is under development
+## This document is under development...
