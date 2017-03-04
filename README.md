@@ -36,6 +36,7 @@ Todos los nombres en el código (variables, clases, atributos, métodos, etc.) e
 - setLegendFontColor() //Color de la fuente de las etiquetas en la leyenda.
 - setLegendFontSize() //Tamaño de la fuente de las etiquetas en la leyenda.
 - setLabels() //Matriz con los textos de las etiquetas inferiores.
+- setDefaults() //Carga los estilos desde el archivo GSTYLE.php.
 - addSerie() //Agrega un objeto de tipo Serie al gráfico.
 - renderToFile() //Genera el gráfico y lo guarda en un archivo.
 
@@ -49,3 +50,5 @@ Todos los nombres en el código (variables, clases, atributos, métodos, etc.) e
 
 ## Ejemplos
 ![graphpoo_example1](https://github.com/mauroruso/graphpoo/blob/master/graphpoo_example1.png)
+
+## Este documento esta en desarrollo...
