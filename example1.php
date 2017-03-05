@@ -1,4 +1,6 @@
 <?php
+    // Ejemplo simple de uso
+
     include('graphpoo.php');
     
     $grafico = new graphpoo;
